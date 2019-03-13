@@ -59,4 +59,13 @@ public class ProductionWorker {
     public void setQuiltingData(List<QuiltingData> quiltingData) {
         this.quiltingData = quiltingData;
     }
+
+    @Override
+    public String toString() {
+        return "ProductionWorker{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 }

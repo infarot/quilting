@@ -50,4 +50,14 @@ public class QuiltingData {
     public void setQuiltedIndices(List<QuiltedIndex> quiltedIndices) {
         this.quiltedIndices = quiltedIndices;
     }
+
+    @Override
+    public String toString() {
+        return "QuiltingData{" +
+                "id=" + id +
+                ", date=" + date +
+                ", operator=" + operator +
+                ", quiltedIndices=" + quiltedIndices +
+                '}';
+    }
 }

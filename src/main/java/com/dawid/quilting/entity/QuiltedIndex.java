@@ -16,12 +16,34 @@ public class QuiltedIndex {
     private int quantity;
     @Column(name = "rejected_quantity")
     private int rejectedQuantity;
+    @Column(name = "quilter_number")
+    private int quilterNumber;
     @ManyToOne
     @JoinColumn(name = "production_worker_id")
     private ProductionWorker productionWorker;
     @ManyToOne
     @JoinColumn(name = "quilting_data_id")
     private QuiltingData quiltingData;
+
+    public QuiltedIndex() {
+    }
+
+    public QuiltedIndex(String itemName, int quantity, int rejectedQuantity, ProductionWorker productionWorker, QuiltingData quiltingData, int quilterNumber) {
+        this.itemName = itemName;
+        this.quantity = quantity;
+        this.rejectedQuantity = rejectedQuantity;
+        this.productionWorker = productionWorker;
+        this.quiltingData = quiltingData;
+        this.quilterNumber = quilterNumber;
+    }
+
+    public int getQuilterNumber() {
+        return quilterNumber;
+    }
+
+    public void setQuilterNumber(int quilterNumber) {
+        this.quilterNumber = quilterNumber;
+    }
 
     public int getId() {
         return id;
@@ -69,5 +91,16 @@ public class QuiltedIndex {
 
     public void setQuiltingData(QuiltingData quiltingData) {
         this.quiltingData = quiltingData;
+    }
+
+    @Override
+    public String toString() {
+        return "QuiltedIndex{" +
+                "id=" + id +
+                ", itemName='" + itemName + '\'' +
+                ", quantity=" + quantity +
+                ", rejectedQuantity=" + rejectedQuantity +
+                ", productionWorker=" + productionWorker +
+                '}';
     }
 }
