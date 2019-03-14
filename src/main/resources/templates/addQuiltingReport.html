@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<form th:object="${quiltingReport}" th:action="@{/addReport}" method="POST">
+<form th:object="${quiltingReportWrapper}" th:action="@{/addReport}" method="POST">
     <div class="container">
         <h1>Dzienny raport pikowarek</h1>
         <hr class="hrBold">
@@ -26,7 +26,6 @@
                     <input class="form-control" type="date" id="date" th:field="*{date}">
 
                 </div>
-
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="operatorSelect">Pikowacz</label>
                     <select class="custom-select mr-sm-2" id="operatorSelect" th:field="*{operatorId}">
@@ -36,6 +35,7 @@
                                 th:utext="${operator.lastName}+' '+${operator.name}">
                         </option>
                     </select>
+                    <label th:if="${#fields.hasErrors('operatorId')}" th:errors="*{operatorId}" class="error"></label>
                 </div>
             </div>
         </div>

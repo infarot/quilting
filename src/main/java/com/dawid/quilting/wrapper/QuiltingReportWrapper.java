@@ -1,75 +1,141 @@
 package com.dawid.quilting.wrapper;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.validation.constraints.Min;
+import javax.validation.constraints.PositiveOrZero;
 import java.time.LocalDate;
 
 public class QuiltingReportWrapper {
     @Min(value = 1, message = "Please choose operator")
     private int operatorId;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private String date = LocalDate.now().toString();
     private int pickerId;
+    @PositiveOrZero
     private Integer ma75;
+    @PositiveOrZero
     private Integer ma75o;
+    @PositiveOrZero
     private Integer ma80;
+    @PositiveOrZero
     private Integer ma80o;
+    @PositiveOrZero
     private Integer ma90;
+    @PositiveOrZero
     private Integer ma90o;
+    @PositiveOrZero
     private Integer ma140;
+    @PositiveOrZero
     private Integer ma140o;
+    @PositiveOrZero
     private Integer ma160;
+    @PositiveOrZero
     private Integer ma160o;
+    @PositiveOrZero
     private Integer mo75;
+    @PositiveOrZero
     private Integer mo75o;
+    @PositiveOrZero
     private Integer mo80;
+    @PositiveOrZero
     private Integer mo80o;
+    @PositiveOrZero
     private Integer mo90;
+    @PositiveOrZero
     private Integer mo90o;
+    @PositiveOrZero
     private Integer mo140;
+    @PositiveOrZero
     private Integer mo140o;
+    @PositiveOrZero
     private Integer mo160;
+    @PositiveOrZero
     private Integer mo160o;
+    @PositiveOrZero
     private int picker2Id;
+    @PositiveOrZero
     private Integer ma752;
+    @PositiveOrZero
     private Integer ma75o2;
+    @PositiveOrZero
     private Integer ma802;
+    @PositiveOrZero
     private Integer ma80o2;
+    @PositiveOrZero
     private Integer ma902;
+    @PositiveOrZero
     private Integer ma90o2;
+    @PositiveOrZero
     private Integer ma1402;
+    @PositiveOrZero
     private Integer ma140o2;
+    @PositiveOrZero
     private Integer ma1602;
+    @PositiveOrZero
     private Integer ma160o2;
+    @PositiveOrZero
     private Integer mo752;
+    @PositiveOrZero
     private Integer mo75o2;
+    @PositiveOrZero
     private Integer mo802;
+    @PositiveOrZero
     private Integer mo80o2;
+    @PositiveOrZero
     private Integer mo902;
+    @PositiveOrZero
     private Integer mo90o2;
+    @PositiveOrZero
     private Integer mo1402;
+    @PositiveOrZero
     private Integer mo140o2;
+    @PositiveOrZero
     private Integer mo1602;
+    @PositiveOrZero
     private Integer mo160o2;
+    @PositiveOrZero
     private int picker3Id;
+    @PositiveOrZero
     private Integer ma753;
+    @PositiveOrZero
     private Integer ma75o3;
+    @PositiveOrZero
     private Integer ma803;
+    @PositiveOrZero
     private Integer ma80o3;
+    @PositiveOrZero
     private Integer ma903;
+    @PositiveOrZero
     private Integer ma90o3;
+    @PositiveOrZero
     private Integer ma1403;
+    @PositiveOrZero
     private Integer ma140o3;
+    @PositiveOrZero
     private Integer ma1603;
+    @PositiveOrZero
     private Integer ma160o3;
+    @PositiveOrZero
     private Integer mo753;
+    @PositiveOrZero
     private Integer mo75o3;
+    @PositiveOrZero
     private Integer mo803;
+    @PositiveOrZero
     private Integer mo80o3;
+    @PositiveOrZero
     private Integer mo903;
+    @PositiveOrZero
     private Integer mo90o3;
+    @PositiveOrZero
     private Integer mo1403;
+    @PositiveOrZero
     private Integer mo140o3;
+    @PositiveOrZero
     private Integer mo1603;
+    @PositiveOrZero
     private Integer mo160o3;
 
     public int getPicker2Id() {
