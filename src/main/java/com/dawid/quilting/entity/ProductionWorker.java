@@ -15,9 +15,9 @@ public class ProductionWorker {
     private String name;
     @Column(name = "last_name")
     private String lastName;
-    @OneToMany(mappedBy = "productionWorker", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "productionWorker", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<QuiltedIndex> quiltedIndex;
-    @OneToMany(mappedBy = "operator", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "operator", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<QuiltingData> quiltingData;
 
     public int getId() {

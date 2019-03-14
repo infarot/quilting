@@ -12,7 +12,6 @@ import java.time.LocalDate;
 public class QuiltingReportWrapper {
     @Positive(message = "Please choose operator")
     private int operatorId;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private String date = LocalDate.now().toString();
     @PositiveOrZero
     private int pickerId;

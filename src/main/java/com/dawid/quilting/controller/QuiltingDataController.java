@@ -62,6 +62,9 @@ public class QuiltingDataController {
             return fillQuiltingReportModel(quiltingReportWrapper, model);
         }
         //parse date
+        if (quiltingReportWrapper.getDate().isEmpty()) {
+            quiltingReportWrapper.setDate(LocalDate.now().toString());
+        }
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate convertedDate = LocalDate.parse(quiltingReportWrapper.getDate(), formatter).plusDays(1);
         //create list of indices
@@ -273,7 +276,7 @@ public class QuiltingDataController {
         //save to db
         quiltingDataService.addQuiltingData(quiltingData);
 
-        model.setViewName("home");
+        model.setViewName("redirect:/");
         return model;
     }
 }

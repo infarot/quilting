@@ -10,6 +10,17 @@ h1{
     text-align: center;
 }
 
+.head{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.head:hover{
+    text-decoration: none;
+    color: greenyellow;
+}
+
 .hrBold{
     border: none;
     height: 4px;
