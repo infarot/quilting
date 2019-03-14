@@ -44,8 +44,8 @@ public class QuiltingDataServiceImpl implements QuiltingDataService {
 
     @Override
     @Transactional
-    public Optional<ProductionWorker> getProductionWorker(int id) {
-        return Optional.ofNullable(productionWorkerRepository.getOne(id));
+    public ProductionWorker getProductionWorker(int id) {
+        return productionWorkerRepository.getOne(id);
     }
 
     @Override

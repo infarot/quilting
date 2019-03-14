@@ -30,7 +30,7 @@
                 <div class="col-auto my-1">
                     <label class="mr-sm-2" for="operatorSelect">Pikowacz</label>
                     <select class="custom-select mr-sm-2" id="operatorSelect" th:field="*{operatorId}">
-                        <option value="0"> --</option>
+                        <option value="0"> -- </option>
                         <option th:each="operator:${productionWorkers}"
                                 th:value="${operator.id}"
                                 th:utext="${operator.lastName}+' '+${operator.name}">
@@ -42,11 +42,10 @@
         <hr class="hrBold">
         <h3>Pikowarka nr 1</h3>
         <div class="d-flex justify-content-center">
-
             <div class="col-auto my-1">
                 <label class="mr-sm-2" for="operatorSelect">Odbierający</label>
                 <select class="custom-select mr-sm-2" id="picker1Select" th:field="*{pickerId}">
-                    <option value="0"> --</option>
+                    <option value="0"> -- </option>
                     <option th:each="picker:${productionWorkers}"
                             th:value="${picker.id}"
                             th:utext="${picker.lastName}+' '+${picker.name}">
@@ -378,7 +377,7 @@
         <div class="d-flex justify-content-center">
             <div class="column">
                 <div class="col-auto my-1">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Wyślij</button>
                 </div>
             </div>
         </div>

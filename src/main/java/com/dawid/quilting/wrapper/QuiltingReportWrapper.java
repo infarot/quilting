@@ -1,9 +1,11 @@
 package com.dawid.quilting.wrapper;
 
 
+import javax.validation.constraints.Min;
 import java.time.LocalDate;
 
 public class QuiltingReportWrapper {
+    @Min(value = 1, message = "Please choose operator")
     private int operatorId;
     private String date = LocalDate.now().toString();
     private int pickerId;

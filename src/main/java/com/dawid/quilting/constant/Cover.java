@@ -1,0 +1,5 @@
+package com.dawid.quilting.constant;
+
+public enum Cover {
+    MALFORS_75, MALFORS_80, MALFORS_90, MALFORS_140, MALFORS_160, MOSHULT_75, MOSHULT_80, MOSHULT_90, MOSHULT_140, MOSHULT_160
+}

@@ -16,7 +16,7 @@ public interface QuiltingDataService {
 
     List<ProductionWorker> getAllProductionWorkers();
 
-    Optional<ProductionWorker> getProductionWorker(int id);
+    ProductionWorker getProductionWorker(int id);
 
     void removeQuiltedData(QuiltingData quiltingData);
 
