@@ -3,139 +3,202 @@ package com.dawid.quilting.wrapper;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
 import java.time.LocalDate;
 
 public class QuiltingReportWrapper {
-    @Min(value = 1, message = "Please choose operator")
+    @Positive(message = "Please choose operator")
     private int operatorId;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private String date = LocalDate.now().toString();
+    @PositiveOrZero
     private int pickerId;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma75;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma75o;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma80;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma80o;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma90;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma90o;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma140;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma140o;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma160;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma160o;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo75;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo75o;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo80;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo80o;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo90;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo90o;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo140;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo140o;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo160;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo160o;
     @PositiveOrZero
     private int picker2Id;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma752;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma75o2;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma802;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma80o2;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma902;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma90o2;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma1402;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma140o2;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma1602;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma160o2;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo752;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo75o2;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo802;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo80o2;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo902;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo90o2;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo1402;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo140o2;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo1602;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo160o2;
     @PositiveOrZero
     private int picker3Id;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma753;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma75o3;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma803;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma80o3;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma903;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma90o3;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma1403;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma140o3;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma1603;
     @PositiveOrZero
+    @Max(1300)
     private Integer ma160o3;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo753;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo75o3;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo803;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo80o3;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo903;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo90o3;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo1403;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo140o3;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo1603;
     @PositiveOrZero
+    @Max(1300)
     private Integer mo160o3;
 
     public int getPicker2Id() {
