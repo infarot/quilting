@@ -32,8 +32,8 @@ public class QuiltingDataServiceImpl implements QuiltingDataService {
 
     @Override
     @Transactional
-    public Optional<QuiltingData> getQuiltingDataByDate(LocalDate date) {
-        return Optional.ofNullable(quiltingDataRepository.getByDate(date));
+    public Optional<QuiltingData> getQuiltingDataByDateAndOperator(LocalDate date, ProductionWorker operator) {
+        return Optional.ofNullable(quiltingDataRepository.getByDateAndOperator(date, operator));
     }
 
     @Override

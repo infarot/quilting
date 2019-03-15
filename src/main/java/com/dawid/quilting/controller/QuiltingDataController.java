@@ -70,10 +70,11 @@ public class QuiltingDataController {
         //create list of indices
         List<QuiltedIndex> quiltedIndices = new ArrayList<>();
         //create or get quilting data
-        QuiltingData quiltingData = quiltingDataService.getQuiltingDataByDate(convertedDate).orElseGet(QuiltingData::new);
+        ProductionWorker operator = quiltingDataService.getProductionWorker(quiltingReportWrapper.getOperatorId());
+        QuiltingData quiltingData = quiltingDataService.getQuiltingDataByDateAndOperator(convertedDate, operator).orElseGet(QuiltingData::new);
         quiltingDataService.removeQuiltedData(quiltingData);
         quiltingData.setDate(convertedDate);
-        quiltingData.setOperator(quiltingDataService.getProductionWorker(quiltingReportWrapper.getOperatorId()));
+        quiltingData.setOperator(operator);
 
         //lazy fetch of pickers
         ProductionWorker pickerQ1 = quiltingDataService.getProductionWorker(quiltingReportWrapper.getPickerId());

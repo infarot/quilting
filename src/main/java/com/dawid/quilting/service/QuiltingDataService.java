@@ -12,7 +12,7 @@ public interface QuiltingDataService {
 
     void addQuiltingData(QuiltingData quiltingData);
 
-    Optional<QuiltingData> getQuiltingDataByDate(LocalDate date);
+    Optional<QuiltingData> getQuiltingDataByDateAndOperator(LocalDate date, ProductionWorker operator);
 
     List<ProductionWorker> getAllProductionWorkers();
 
