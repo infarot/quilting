@@ -1,6 +1,7 @@
 package com.dawid.quilting.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @Entity
@@ -11,8 +12,10 @@ public class ProductionWorker {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
+    @NotBlank
     @Column(name = "name")
     private String name;
+    @NotBlank
     @Column(name = "last_name")
     private String lastName;
     @OneToMany(mappedBy = "productionWorker", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})

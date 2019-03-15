@@ -11,7 +11,34 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/addProductionWorker.css}"/>
 </head>
 <body>
-<h2><a class="head" href="/">Dodawanie pracownika</a></h2>
-
+<form th:object="${productionWorker}" th:action="@{/addProductionWorker}" method="POST">
+    <div class="container">
+        <h2><a class="head" href="/">Dodawanie pracownika</a></h2>
+        <div class="d-flex justify-content-center">
+            <input type="hidden" th:field="*{id}"/>
+            <div class="row">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="name">Imię</label>
+                    <input class="form-control" type="text" id="name" th:field="*{name}">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="lastName">Nazwisko</label>
+                    <input class="form-control" type="text" id="lastName" th:field="*{lastName}">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="column">
+                <div class="col-auto my-1">
+                    <button type="submit" class="btn btn-primary">Zapisz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 </body>
 </html>

@@ -11,16 +11,40 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/listProductionWorkers.css}"/>
 </head>
 <body>
-    <h2><a class="head" href="/">Lista pracowników</a></h2>
+<h2><a class="head" href="/">Lista pracowników</a></h2>
 <div class="d-flex justify-content-center">
 
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Akcja</th>
+        </tr>
+        </thead>
 
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item" th:each="productionWorker:${productionWorkers}"
-            th:value="${productionWorker.id}"
-            th:utext="${productionWorker.lastName}+' '+${productionWorker.name}">
-        </li>
-    </ul>
+        <tbody>
+        <tr th:each="productionWorker : ${productionWorkers}">
+
+            <td th:text="${productionWorker.name}"/>
+            <td th:text="${productionWorker.lastName}"/>
+
+            <td>
+                <div class="row">
+                    <div class="col-small">
+                        <!-- Add "update" button/link -->
+                        <form action="#" th:action="@{/showFormForUpdate}" method="POST">
+                            <input type="hidden" name="productionWorkerId" th:value="${productionWorker.id}"/>
+                            <button type="submit" class="btn btn-info btn-sm ml-3 mr-1">Aktualizuj</button>
+                        </form>
+                    </div>
+                </div>
+            </td>
+
+
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 </body>
