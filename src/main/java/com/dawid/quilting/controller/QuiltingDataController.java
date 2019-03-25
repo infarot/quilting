@@ -145,7 +145,7 @@ public class QuiltingDataController {
             return fillQuiltingReportModel(quiltingReportWrapper, model);
         }
         //second quilter
-        if (quiltingReportWrapper.getPickerId() > 0) {
+        if (quiltingReportWrapper.getPicker2Id() > 0) {
             if (quiltingReportWrapper.getMa752() != null && quiltingReportWrapper.getMa752() > 0) {
                 if (quiltingReportWrapper.getMa75o2() == null)
                     quiltingReportWrapper.setMa75o2(0);
@@ -209,7 +209,7 @@ public class QuiltingDataController {
             return fillQuiltingReportModel(quiltingReportWrapper, model);
         }
         //third quilter
-        if (quiltingReportWrapper.getPickerId() > 0) {
+        if (quiltingReportWrapper.getPicker3Id() > 0) {
             if (quiltingReportWrapper.getMa753() != null && quiltingReportWrapper.getMa753() > 0) {
                 if (quiltingReportWrapper.getMa75o3() == null)
                     quiltingReportWrapper.setMa75o3(0);

@@ -719,4 +719,75 @@ public class QuiltingReportWrapper {
     public void setMo160o(Integer mo160o) {
         this.mo160o = mo160o;
     }
+
+    @Override
+    public String toString() {
+        return "QuiltingReportWrapper{" +
+                "operatorId=" + operatorId +
+                ", date='" + date + '\'' +
+                ", pickerId=" + pickerId +
+                ", ma75=" + ma75 +
+                ", ma75o=" + ma75o +
+                ", ma80=" + ma80 +
+                ", ma80o=" + ma80o +
+                ", ma90=" + ma90 +
+                ", ma90o=" + ma90o +
+                ", ma140=" + ma140 +
+                ", ma140o=" + ma140o +
+                ", ma160=" + ma160 +
+                ", ma160o=" + ma160o +
+                ", mo75=" + mo75 +
+                ", mo75o=" + mo75o +
+                ", mo80=" + mo80 +
+                ", mo80o=" + mo80o +
+                ", mo90=" + mo90 +
+                ", mo90o=" + mo90o +
+                ", mo140=" + mo140 +
+                ", mo140o=" + mo140o +
+                ", mo160=" + mo160 +
+                ", mo160o=" + mo160o +
+                ", picker2Id=" + picker2Id +
+                ", ma752=" + ma752 +
+                ", ma75o2=" + ma75o2 +
+                ", ma802=" + ma802 +
+                ", ma80o2=" + ma80o2 +
+                ", ma902=" + ma902 +
+                ", ma90o2=" + ma90o2 +
+                ", ma1402=" + ma1402 +
+                ", ma140o2=" + ma140o2 +
+                ", ma1602=" + ma1602 +
+                ", ma160o2=" + ma160o2 +
+                ", mo752=" + mo752 +
+                ", mo75o2=" + mo75o2 +
+                ", mo802=" + mo802 +
+                ", mo80o2=" + mo80o2 +
+                ", mo902=" + mo902 +
+                ", mo90o2=" + mo90o2 +
+                ", mo1402=" + mo1402 +
+                ", mo140o2=" + mo140o2 +
+                ", mo1602=" + mo1602 +
+                ", mo160o2=" + mo160o2 +
+                ", picker3Id=" + picker3Id +
+                ", ma753=" + ma753 +
+                ", ma75o3=" + ma75o3 +
+                ", ma803=" + ma803 +
+                ", ma80o3=" + ma80o3 +
+                ", ma903=" + ma903 +
+                ", ma90o3=" + ma90o3 +
+                ", ma1403=" + ma1403 +
+                ", ma140o3=" + ma140o3 +
+                ", ma1603=" + ma1603 +
+                ", ma160o3=" + ma160o3 +
+                ", mo753=" + mo753 +
+                ", mo75o3=" + mo75o3 +
+                ", mo803=" + mo803 +
+                ", mo80o3=" + mo80o3 +
+                ", mo903=" + mo903 +
+                ", mo90o3=" + mo90o3 +
+                ", mo1403=" + mo1403 +
+                ", mo140o3=" + mo140o3 +
+                ", mo1603=" + mo1603 +
+                ", mo160o3=" + mo160o3 +
+                '}';
+    }
 }
