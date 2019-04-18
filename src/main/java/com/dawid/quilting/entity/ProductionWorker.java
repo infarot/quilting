@@ -18,10 +18,40 @@ public class ProductionWorker {
     @NotBlank
     @Column(name = "last_name")
     private String lastName;
+    @Column(name = "visible")
+    private Boolean visible;
+    @Column(name = "is_operator")
+    private Boolean operator;
+    @Column(name = "is_picker")
+    private Boolean picker;
     @OneToMany(mappedBy = "productionWorker", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<QuiltedIndex> quiltedIndex;
     @OneToMany(mappedBy = "operator", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<QuiltingData> quiltingData;
+
+    public Boolean getVisible() {
+        return visible;
+    }
+
+    public void setVisible(Boolean visible) {
+        this.visible = visible;
+    }
+
+    public Boolean getOperator() {
+        return operator;
+    }
+
+    public void setOperator(Boolean operator) {
+        this.operator = operator;
+    }
+
+    public Boolean getPicker() {
+        return picker;
+    }
+
+    public void setPicker(Boolean picker) {
+        this.picker = picker;
+    }
 
     public int getId() {
         return id;

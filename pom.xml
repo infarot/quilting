@@ -12,10 +12,10 @@
 	<artifactId>quilting</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>quilting</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Quilting reporting app</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>12</java.version>
 	</properties>
 
 	<dependencies>

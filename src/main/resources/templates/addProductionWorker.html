@@ -29,6 +29,30 @@
             </div>
         </div>
         <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="lastName">Widoczny</label>
+                    <input class="form-control" type="checkbox" id="visible" th:field="*{visible}">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="lastName">Pikowacz</label>
+                    <input class="form-control" type="checkbox" id="operator" th:field="*{operator}">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="lastName">Odbierający</label>
+                    <input class="form-control" type="checkbox" id="picker" th:field="*{picker}">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
             <div class="column">
                 <div class="col-auto my-1">
                     <button type="submit" class="btn btn-primary">Zapisz</button>

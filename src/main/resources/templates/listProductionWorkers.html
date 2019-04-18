@@ -16,6 +16,9 @@
         <tr>
             <th>Imię</th>
             <th>Nazwisko</th>
+            <th>Widoczny</th>
+            <th>Pikowacz</th>
+            <th>Odbierający</th>
             <th>Akcja</th>
         </tr>
         </thead>
@@ -25,7 +28,18 @@
 
             <td th:text="${productionWorker.name}"/>
             <td th:text="${productionWorker.lastName}"/>
-
+            <td>
+                <span th:if="${productionWorker.visible == true}">Tak</span>
+                <span th:if="${productionWorker.visible == false}">Nie</span>
+            </td>
+            <td>
+                <span th:if="${productionWorker.operator == true}">Tak</span>
+                <span th:if="${productionWorker.operator == false}">Nie</span>
+            </td>
+            <td>
+                <span th:if="${productionWorker.picker == true}">Tak</span>
+                <span th:if="${productionWorker.picker == false}">Nie</span>
+            </td>
             <td>
                 <div class="row">
                     <div class="col-small">
